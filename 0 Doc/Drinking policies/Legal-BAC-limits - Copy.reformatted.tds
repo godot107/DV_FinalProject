@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='textscan.42121.675107488423' inline='true' source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.15.0219.2230                                -->
+  <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies' filename='Legal-BAC-limits - Copy.reformatted.csv'>
+    <relation name='Legal-BAC-limits - Copy.reformatted#csv' table='[Legal-BAC-limits - Copy.reformatted#csv]' type='table'>
+      <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+        <column datatype='string' name='Country' ordinal='0' />
+        <column datatype='integer' name='Year' ordinal='1' />
+        <column datatype='real' name='General_population' ordinal='2' />
+        <column datatype='real' name='Young_novice_drivers' ordinal='3' />
+        <column datatype='real' name='commercial_drivers' ordinal='4' />
+      </columns>
+    </relation>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>Country</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Country]</local-name>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias>Country</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>1</scale>
+        <width>1073741823</width>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+          <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+          <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+          <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Year</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Year]</local-name>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias>Year</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>General_population</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[General_population]</local-name>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias>General_population</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Young_novice_drivers</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Young_novice_drivers]</local-name>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias>Young_novice_drivers</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>commercial_drivers</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[commercial_drivers]</local-name>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias>commercial_drivers</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name></remote-name>
+        <remote-type>0</remote-type>
+        <parent-name>[Legal-BAC-limits - Copy.reformatted#csv]</parent-name>
+        <remote-alias></remote-alias>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+          <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+          <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+          <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+          <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+  </column>
+  <column caption='General population' datatype='real' name='[General_population]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='integer' name='[Year]' role='dimension' type='quantitative'>
+  </column>
+  <column caption='Young novice drivers' datatype='real' name='[Young_novice_drivers]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Commercial Drivers' datatype='real' name='[commercial_drivers]' role='measure' type='quantitative'>
+  </column>
+  <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+</datasource>

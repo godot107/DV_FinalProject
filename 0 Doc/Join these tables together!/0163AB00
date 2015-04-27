@@ -1,0 +1,194 @@
+Country,Year, Male, Female, Both sexes
+Afghanistan,2010,90,95,92.5
+Albania,2010,17.5,31.2,24.4
+Algeria,2010,75,87.6,81.3
+Andorra,2010,8,17.1,12.6
+Angola,2010,37.8,65.6,52
+Antigua and Barbuda,2010,8.3,22.1,15.3
+Argentina,2010,11.7,29.7,21
+Armenia,2010,8,38,23
+Australia,2010,5.9,14,10
+Austria,2010,14,22,18.1
+Azerbaijan,2010,25.1,51.4,38.7
+Bahamas,2010,14.2,34.2,24.5
+Bahrain,2010,83.6,89.4,85.6
+Bangladesh,2010,85.4,93.2,89.3
+Barbados,2010,6.5,18,12.3
+Belarus,2010,6.5,18,12.8
+Belgium,2010,3.8,8.6,6.2
+Belize,2010,41,81.3,61.3
+Benin,2010,42,60,51.1
+Bhutan,2010,70.3,88.4,78.5
+Bolivia (Plurinational State of),2010,16.4,38,27.3
+Bosnia and Herzegovina,2010,12.8,31.3,22.4
+Botswana,2010,27.8,54.7,41.3
+Brazil,2010,12.4,30.8,21.9
+Brunei Darussalam,2010,60,72,66
+Bulgaria,2010,7.7,21,14.6
+Burkina Faso,2010,36.6,64.2,50.8
+Burundi,2010,30.9,58.5,44.9
+Côte d'Ivoire,2010,53.8,83,67.9
+Cabo Verde,2010,34.7,62.7,48.9
+Cambodia,2010,34.8,62.4,49.3
+Cameroon,2010,30,57.4,43.8
+Canada,2010,8.7,13.3,11.1
+Central African Republic,2010,53.2,78.1,65.9
+Chad,2010,64,83.2,73.7
+Chile,2010,8.7,23.2,16.1
+China,2010,25.8,52.3,38.7
+Colombia,2010,18.9,42.1,30.9
+Comoros,2010,66.2,86,76.1
+Congo,2010,48.9,75,62
+Cook Islands,2010,21,45.6,33.1
+Costa Rica,2010,16.8,38.8,27.6
+Croatia,2010,4,11.8,8.1
+Cuba,2010,9.6,25.3,17.4
+Cyprus,2010,3.3,9.7,6.4
+Czech Republic,2010,2.5,2.6,2.6
+Democratic People's Republic of Korea,2010,53.3,78.3,66.3
+Democratic Republic of the Congo,2010,49.7,75.6,62.8
+Denmark,2010,1.9,7,4.5
+Djibouti,2010,81.6,87.4,84.5
+Dominica,2010,11.7,29.5,20.8
+Dominican Republic,2010,14.9,35.5,25.2
+Ecuador,2010,19.8,43.6,31.8
+Egypt,2010,86.2,93.1,89.7
+El Salvador,2010,21.3,45.5,34.4
+Equatorial Guinea,2010,35.1,63.2,48.7
+Eritrea,2010,45.7,56.3,51.1
+Estonia,2010,11,22,17
+Ethiopia,2010,62.3,79.9,71.2
+Fiji,2010,32.4,60.1,46
+Finland,2010,7.2,20.4,14
+France,2010,0.9,3,2
+Gabon,2010,24.8,50.9,37.9
+Gambia,2010,82.4,93.2,87.9
+Georgia,2010,28,71,51.3
+Germany,2010,4.3,6.6,5.5
+Ghana,2010,51,76.5,64.1
+Greece,2010,9.7,19.5,14.7
+Grenada,2010,18.7,42.5,30.7
+Guatemala,2010,22.8,47.9,36.1
+Guinea,2010,75,90,82.5
+Guinea-Bissau,2010,47.1,73.6,60.5
+Guyana,2010,11.5,28.8,20.3
+Haiti,2010,14.1,33.8,24.2
+Honduras,2010,19.7,43.5,31.8
+Hungary,2010,3.6,9.4,6.7
+Iceland,2010,7.5,20.6,14.1
+India,2010,59.3,90,74.2
+Indonesia,2010,74.2,90,82.1
+Iran (Islamic Republic of),2010,90.8,95.7,93.2
+Iraq,2010,87.7,93.9,90.8
+Ireland,2010,3.7,9.5,6.7
+Israel,2010,30,52,41.3
+Italy,2010,13,37.5,25.7
+Jamaica,2010,20,44.1,32.4
+Japan,2010,5,18.5,12
+Jordan,2010,91.4,94.3,92.8
+Kazakhstan,2010,34,61,48.3
+Kenya,2010,51.8,77.1,64.6
+Kiribati,2010,43.5,70.9,57.1
+Kuwait,2010,75.4,85.8,79.3
+Kyrgyzstan,2010,34,64,49.4
+Lao People's Democratic Republic,2010,19.3,42.8,31.3
+Latvia,2010,7.2,20.2,14.3
+Lebanon,2010,72.8,85.2,78.8
+Lesotho,2010,44.4,71.2,58.2
+Liberia,2010,50.8,75.2,63.1
+Libya,2010,93.9,97,95.4
+Lithuania,2010,8,24,16.8
+Luxembourg,2010,0.8,2.5,1.7
+Madagascar,2010,61.5,83.4,72.6
+Malawi,2010,55.8,79.8,67.9
+Malaysia,2010,73.1,89.2,81
+Maldives,2010,71.5,88.7,80.1
+Mali,2010,91.1,96,93.6
+Malta,2010,10.7,27.6,19.2
+Marshall Islands,2010,,,
+Mauritania,2010,94,96,95
+Mauritius,2010,41.8,69.4,55.8
+Mexico,2010,12.8,31.3,22.6
+Micronesia (Federated States of),2010,33.1,60.7,46.7
+Monaco,2010,,,
+Mongolia,2010,20.2,44.3,32.5
+Montenegro,2010,9.1,24.1,16.8
+Morocco,2010,80.8,92,86.6
+Mozambique,2010,57.3,80.7,69.6
+Myanmar,2010,76.5,91.1,84.1
+Namibia,2010,34.2,61.8,48.7
+Nauru,2010,49.6,75.7,62.6
+Nepal,2010,76.8,91.2,84.4
+Netherlands,2010,2.4,5.2,3.8
+New Zealand,2010,8,14,11.1
+Nicaragua,2010,18.1,41,29.8
+Niger,2010,90,94.8,92.4
+Nigeria,2010,26.1,52.5,39.2
+Niue,2010,21.9,46.9,34.2
+Norway,2010,2.7,8.3,5.5
+Oman,2010,87.3,94,89.9
+Pakistan,2010,89.6,94.8,92.1
+Palau,2010,14.5,34.9,24.7
+Panama,2010,11.4,28.8,20
+Papua New Guinea,2010,39.3,67,53
+Paraguay,2010,10,26,17.9
+Peru,2010,14.8,35.3,25.1
+Philippines,2010,21.5,46.2,34
+Poland,2010,15.8,37.8,27.3
+Portugal,2010,12.6,31.7,22.5
+Qatar,2010,87.3,94,88.7
+Republic of Korea,2010,20.9,45.7,33.5
+Republic of Moldova,2010,8.2,22.3,15.7
+Romania,2010,7.6,20.7,14.3
+Russian Federation,2010,6.5,18.5,13
+Rwanda,2010,28.7,55.8,42.8
+Saint Kitts and Nevis,2010,22.8,48.2,35.7
+Saint Lucia,2010,15.9,37.3,26.9
+Saint Vincent and the Grenadines,2010,13.9,33.9,23.8
+Samoa,2010,28.8,56.1,42.1
+San Marino,2010,,,
+Sao Tome and Principe,2010,36.4,64.2,50.7
+Saudi Arabia,2010,87.3,94,90.1
+Senegal,2010,85,95,90.2
+Serbia,2010,8.6,23,16
+Seychelles,2010,21.6,46.9,34.1
+Sierra Leone,2010,29,56.1,42.7
+Singapore,2010,14.3,54,34.5
+Slovakia,2010,8.4,20.2,14.4
+Slovenia,2010,42.0 42.0,69.3 69.3,55.6 55.6
+Solomon Islands,2010,90.0 90.0,95.0 95.0,92.5 92.5
+Somalia,2010,28.0 28.0,54.9 54.9,42.0 42.0
+South Africa,2010, , , 
+Spain,2010,8,17.1,12.6
+Sri Lanka,2010,56.9,80.5,69.1
+Sudan,2010,69.2,82.6,75.9
+Suriname,2010,16.2,37.9,27.1
+Swaziland,2010,29.7,56.8,43.7
+Sweden,2010,6.2,17.8,12.1
+Switzerland,2010,3.8,7.6,5.7
+Syrian Arab Republic,2010,78.3,88.3,83.2
+Tajikistan,2010,75,90,82.5
+Thailand,2010,42.5,75.5,59.5
+The former Yugoslav republic of Macedonia,2010,13,32.1,22.6
+Timor-Leste,2010,77.9,91.7,84.7
+Togo,2010,28.1,37.9,33.1
+Tonga,2010,40.7,68.4,54.8
+Trinidad and Tobago,2010,16.7,38.9,28
+Tunisia,2010,80.5,91.9,86.3
+Turkey,2010,65.9,92.4,79.6
+Turkmenistan,2010,21.9,70,46.6
+Tuvalu,2010,50.1,75.9,62.8
+Uganda,2010,27.9,54.9,41.4
+Ukraine,2010,7.9,16.4,12.5
+United Arab Emirates,2010,80.8,94.4,84.4
+United Kingdom of Great Britain and Northern Ireland,2010,12,18,15.1
+United Republic of Tanzania,2010,31.2,58.7,45.1
+United States of America,2010,6.2,17.4,12
+Uruguay,2010,11.6,29.6,21.1
+Uzbekistan,2010,25,70,47.8
+Vanuatu,2010,42.2,69.8,56
+Venezuela (Bolivarian Republic of),2010,11.8,29.6,20.7
+Viet Nam,2010,34.9,62.9,49.3
+Yemen,2010,89.5,94.7,92.1
+Zambia,2010,46.4,73.1,59.8
+Zimbabwe,2010,35.6,63.3,49.8

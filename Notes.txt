@@ -1,0 +1,23 @@
+Final Project Notes:
+	http://www.wineinstitute.org/resources/statistics
+
+	https://data.oecd.org/healthrisk/alcohol-consumption.htm
+
+	http://statistical.proquest.com/statisticalinsight/search/basic/sibasicsearch
+
+	http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/by_the_numbers/drunk_driving/index.html
+
+	http://apps.who.int/gho/data/node.main.GISAH?lang=en
+
+	google search: DUI data sets
+
+
+It looks a lot of the data sets are organized by country so we can make our own data sets if we have to from what we have here. 
+Because that there's a lot of data sets I think we need to be familiar in terms of formatting our data sources
+
+can probably remake the same graphs from:
+http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/by_the_numbers/drunk_driving/index.html
+
+since they give CSV for it
+
+I think if we are stump, we could always look at other people and see what they did. 
