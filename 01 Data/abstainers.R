@@ -56,4 +56,23 @@ abstainerslifetime <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/
 
 abstainers12month <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from ABSTAINERSPAST12MONTHS"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
+# I am assuming x is lifetime abstainers and y is 12 month abstainers 
+abstainers <- full_join(abstainerslifetime, abstainers12month, by = "COUNTRY")
+
+#tbl_df(abstainers)
+#colnames(abstainers)
+
+ggplot(data = abstainers, aes(x =  MALE.x)) + geom_histogram(binwidth = 500) 
+ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y))
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x))
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y))
+
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x))
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y))
+
+qplot(BOTH_SEXES.y, data =abstainers, geom = "histogram", binwidth = 50 )
+
+
+ggplot(abstainers, aes(factor(COUNTRY), MALE.x)) + geom_boxplot()
+
 

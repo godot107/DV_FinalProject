@@ -5,8 +5,8 @@
   <preferences>
   </preferences>
   <datasources>
-    <datasource caption='Legal-BAC-limits - Copy.reformatted' inline='true' name='textscan.42121.675107488423' version='8.3'>
-      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies' filename='Legal-BAC-limits - Copy.reformatted.csv'>
+    <datasource caption='Legal-BAC-limits - Copy.reformatted' inline='true' name='textscan.42129.002204050928' version='8.3'>
+      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drinking policies' filename='Legal-BAC-limits - Copy.reformatted.csv'>
         <relation name='Legal-BAC-limits - Copy.reformatted#csv' table='[Legal-BAC-limits - Copy.reformatted#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='Country' ordinal='0' />
@@ -134,8 +134,8 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
-    <datasource caption='Penalties for drink driving - Copy.reformatted' inline='true' name='textscan.42121.677259074073' version='8.3'>
-      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies' filename='Penalties for drink driving - Copy.reformatted.csv'>
+    <datasource caption='Penalties for drink driving - Copy.reformatted' inline='true' name='textscan.42129.002431342589' version='8.3'>
+      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drinking policies' filename='Penalties for drink driving - Copy.reformatted.csv'>
         <relation name='Penalties for drink driving - Copy.reformatted#csv' table='[Penalties for drink driving - Copy.reformatted#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='Country' ordinal='0' />
@@ -399,8 +399,8 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
-    <datasource caption='Random breath testing - Copy.reformatted' inline='true' name='textscan.42121.677605787037' version='8.3'>
-      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies' filename='Random breath testing - Copy.reformatted.csv'>
+    <datasource caption='Random breath testing - Copy.reformatted' inline='true' name='textscan.42129.004101307873' version='8.3'>
+      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drinking policies' filename='Random breath testing - Copy.reformatted.csv'>
         <relation name='Random breath testing - Copy.reformatted#csv' table='[Random breath testing - Copy.reformatted#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='Country' ordinal='0' />
@@ -498,8 +498,8 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
-    <datasource caption='Sobriety checkpoints - Copy.reformatted' inline='true' name='textscan.42121.677843993057' version='8.3'>
-      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies' filename='Sobriety checkpoints - Copy.reformatted.csv'>
+    <datasource caption='Sobriety checkpoints - Copy.reformatted' inline='true' name='textscan.42129.004219398150' version='8.3'>
+      <connection class='textscan' directory='C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drinking policies' filename='Sobriety checkpoints - Copy.reformatted.csv'>
         <relation name='Sobriety checkpoints - Copy.reformatted#csv' table='[Sobriety checkpoints - Copy.reformatted#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='Country' ordinal='0' />
@@ -520,9 +520,9 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
+            <collation flag='0' name='LEN_RUS' />
             <attributes>
-              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
               <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
               <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
               <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
@@ -556,9 +556,9 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
+            <collation flag='0' name='LEN_RUS' />
             <attributes>
-              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
               <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
               <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
               <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
@@ -603,7 +603,13 @@
       <table>
         <view>
           <datasources>
+            <datasource caption='Sobriety checkpoints - Copy.reformatted' name='textscan.42129.004219398150' />
           </datasources>
+          <datasource-dependencies datasource='textscan.42129.004219398150'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style>
@@ -614,10 +620,16 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
         <rows></rows>
-        <cols></cols>
+        <cols>[textscan.42129.004219398150].[none:Country:nk]</cols>
       </table>
     </worksheet>
   </worksheets>
@@ -641,20 +653,53 @@
           </strip>
         </edge>
       </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42129.004101307873].[none:Random_breath_testing_RBT_use:nk]</field>
+          <field>[textscan.42129.004219398150].[none:Country:nk]</field>
+          <field>[textscan.42129.004219398150].[none:Sobriety_checkpoints:nk]</field>
+        </color-one-way>
+      </highlight>
     </window>
   </windows>
   <thumbnails>
-    <thumbnail height='144' name='Sheet 1' width='174'>
-      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
-      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
-      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
-      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
-      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
-      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
-      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
-      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
-      gg==
+    <thumbnail height='84' name='Sheet 1' width='192'>
+      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
+      QmCC
     </thumbnail>
   </thumbnails>
 </workbook>
