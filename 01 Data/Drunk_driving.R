@@ -3,6 +3,7 @@ library("RCurl")
 require(dplyr)
 require("ggplot2")
 library(extrafont)
+library("reshape2")
 
 setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drunk Driving-statistics")
 
@@ -54,10 +55,42 @@ cat(sql)
 
 # End Reformatting the Data
 
+# Data Frames
 figure_01_2 <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from figure_01_2"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
 figure_02_2 <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from figure_02_2"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
 figure_03_2 <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from figure_03_2"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
+# Plots
+ggplot(figure_01_2, aes(x=YEAR, y=TOTAL_FATALITIES)) + geom_line()
+ggplot(figure_01_2, aes(x=YEAR, y=ALCOHOL_RELATED_FATALITIES)) + geom_line()
+ggplot(figure_01_2, aes(x=YEAR, y=NON_ALCOHOL_RELATED)) + geom_line()
+ggplot(figure_01_2, aes(x=YEAR, y=PERCENTAGE)) + geom_line() # Try to fix this scale... quite misleadings
 
+#Figure 1
+# Reshaping the data with melt from reshape2
+mdf <- melt(figure_01_2, id.vars = "YEAR", measure.vars = c("TOTAL_FATALITIES", "ALCOHOL_RELATED_FATALITIES","NON_ALCOHOL_RELATED"))
+ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
+
+#Figure 2
+# Reshaping the data with melt from reshape2
+mdf <- melt(figure_02_2, id.vars = "YEAR", measure.vars = c("OCCUPANTS", "PEDESTRIANS","PEDALCYCLISTS", "OTHERS_UNKNOWN" ))
+ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+
+ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+
+ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
+
+
+#Figure 3
+# Reshaping the data with melt from reshape2
+mdf <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("TOTAL_FATALITIES","ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" ))
+ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+
+#Figure 3
+ggplot(figure_03_2, aes(x=YEAR, y=ALCOHOL_USE_FATALITIES))+ geom_bar(stat="identity")
+
+mdf <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" ))
+ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
