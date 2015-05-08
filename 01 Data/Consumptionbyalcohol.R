@@ -45,3 +45,5 @@ for(m in measures) {
 sql <- paste(sql, ");")
 cat(sql)
 # End Reframing the Data
+
+CONSUMPTION_OF_PURE_ALCOHOL <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from CONSUMPTION_OF_PURE_ALCOHOL"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
