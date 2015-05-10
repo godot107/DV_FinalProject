@@ -6,7 +6,8 @@ require("ggplot2")
 library(extrafont)
 library("reshape2")
 
-setwd("~/DV_FinalProject/0 Doc/Drinking policies")
+
+setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc")
 
 
 file_path <- "drinking_policies.csv"

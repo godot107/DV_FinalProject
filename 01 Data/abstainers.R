@@ -6,7 +6,8 @@ library(extrafont)
 library("reshape2")
 
 # Reformatting the Table Frame abstainerslifetime and 12 Months
-setwd("~/DV_FinalProject/0 Doc/Join these tables together!")
+#setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Join these tables together!")
+setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc")
 
 #file_path <- "Abstainers-lifetime-Copy.csv"
 file_path <- "Abstainers-past-12-months - Copy.csv"
@@ -71,8 +72,8 @@ ggplot(data = abstainers) + geom_histogram(aes(x = MALE.x), binwidth = 5) + xlab
 ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y), binwidth = 5) + xlab("Male Abstainers 12 Months") + ylab("Count")
 ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x), binwidth = 5) + xlab("Female Abstainers Life Time") + ylab("Count")
 ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y), binwidth = 5) + xlab("Female Abstainers 12 Months") + ylab("Count")
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x, binwidth = 5)) + xlab("Both Genders Abstainers Life Time") + ylab("Count")
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y, binwidth = 5)) + xlab("Both Genders Abstainers 12 Months") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTHSEXES.x, binwidth = 5)) + xlab("Both Genders Abstainers Life Time") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTHSEXES.y, binwidth = 5)) + xlab("Both Genders Abstainers 12 Months") + ylab("Count")
 
 
 

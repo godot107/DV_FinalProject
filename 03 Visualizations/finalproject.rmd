@@ -1,0 +1,47 @@
+---
+title: "Final Project"
+author: "Willie, Lauren, Leo"
+date: "Sunday, May 10, 2015"
+output: html_document
+---
+
+
+Blahhhhh ... 
+
+
+```{r}
+source("../01 Data/abstainers.R", echo = TRUE)
+```
+
+
+
+```{r}
+source("../01 Data/Consumptionbyalcohol.R", echo = TRUE)
+```
+
+
+```{r}
+source("../01 Data/Costs.R", echo = TRUE)
+```
+
+
+```{r}
+source("../01 Data/Drinking policies.R", echo = TRUE)
+```
+
+```{r}
+source("../01 Data/Drunk_driving.R", echo = TRUE)
+```
+
+
+```{r}
+source("../02 Data Wrangling/Datawrangling.R", echo = TRUE)
+```
+
+
+
+
+
+
+
+
