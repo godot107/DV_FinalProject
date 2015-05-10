@@ -1,5 +1,5 @@
 Country,Year,Total_costs,Direct_law_costs,Direct_health_costs,Direct_other_costs,Indirect_costs
-Argentina,2007,947.9,0,176.6,294.8,476.5
+Argentina,2007,947.9,,176.6,294.8,476.5
 Australia,1998,5227.6,809,212.3,2300.5,1905.8
 Canada,2002,13957.9,2946.4,3170.7,1006.2,6834.5
 Chile,1998,2969.9,8.3,113.8,21,2826.8

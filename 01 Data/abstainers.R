@@ -3,6 +3,7 @@ library("RCurl")
 require(dplyr)
 require("ggplot2")
 library(extrafont)
+library("reshape2")
 
 # Reformatting the Table Frame abstainerslifetime and 12 Months
 setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Join these tables together!")
