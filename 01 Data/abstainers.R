@@ -6,16 +6,16 @@ library(extrafont)
 library("reshape2")
 
 # Reformatting the Table Frame abstainerslifetime and 12 Months
-setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Join these tables together!")
+setwd("~/DV_FinalProject/0 Doc/Join these tables together!")
 
-file_path <- "Abstainers-lifetime-Copy.csv"
-#file_path <- "Abstainers-past-12-months - Copy.csv"
+#file_path <- "Abstainers-lifetime-Copy.csv"
+file_path <- "Abstainers-past-12-months - Copy.csv"
 
 df <- read.csv(file_path, stringsAsFactors = FALSE)
 names(df) <- gsub("\\.+", "_", names(df))
 str(df)
 
-measures <- c("Year","Male", "Female","Both_sexes"  )
+measures <- c("Year","Male", "Female","Bothsexes"  )
 
 for(n in names(df)) {
   df[n] <- data.frame(lapply(df[n], gsub, pattern="[^ -~]",replacement= ""))
@@ -55,28 +55,25 @@ cat(sql)
 
 abstainerslifetime <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from ABSTAINERSLIFETIME"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
-abstainers12month <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from abstainers12months"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
+abstainers12month <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from abstainerspast12months"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
 # I am assuming x is lifetime abstainers and y is 12 month abstainers 
 abstainers <- full_join(abstainerslifetime, abstainers12month, by = "COUNTRY")
-
+tbl_df(abstainers)
 #tbl_df(abstainers)
 #colnames(abstainers)
 
-
-ggplot(data = abstainerslifetime, aes(x =  MALE)) + geom_histogram(binwidth = 5, position="identity")
-
-ggplot(data = abstainers, aes(x =  MALE.x)) + geom_histogram(binwidth = 20, position="identity")
-
-ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y))
-ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x), binwidth = 50)
-ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y))
-
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x))
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y))
+mdf_abstainers <- melt(abstainers, id.vars = "COUNTRY", measure.vars = c("MALE.x", "FEMALE.x", "BOTHSEXES.x", "YEAR.y", "MALE.y", "FEMALE.y" ,"BOTHSEXES.y"))
+tbl_df(mdf_abstainers)
 
 
-qplot(BOTH_SEXES.y, data =abstainers, geom = "histogram", binwidth = 500 ) + xlab("kersnuff")
+ggplot(data = abstainers) + geom_histogram(aes(x = MALE.x), binwidth = 5)
+ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y), binwidth = 5)
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x), binwidth = 5)
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y), binwidth = 5)
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x, binwidth = 5))
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y, binwidth = 5))
+
 
 
 ggplot(abstainers, aes(factor(COUNTRY), MALE.x)) + geom_boxplot()

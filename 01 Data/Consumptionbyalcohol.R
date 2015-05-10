@@ -51,12 +51,10 @@ cat(sql)
 CONSUMPTION_OF_PURE_ALCOHOL <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from CONSUMPTION_OF_PURE_ALCOHOL"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
 names(CONSUMPTION_OF_PURE_ALCOHOL)
-mdf <- melt(CONSUMPTION_OF_PURE_ALCOHOL, id.vars = "COUNTRY", measure.vars = c("BEER", "WINE", "SPIRITS", "OTHER_ALCOHOLIC_BEVERAGES" ))
 
-#mdf <- melt(CONSUMPTION_OF_PURE_ALCOHOL, id.vars = "year", measure.vars = c("Beer", "Wine", "Spirits", "Other_alcoholic_beverages" ))
+mdf_consumption <- melt(CONSUMPTION_OF_PURE_ALCOHOL, id.vars = "COUNTRY", measure.vars = c("BEER", "WINE", "SPIRITS", "OTHER_ALCOHOLIC_BEVERAGES" ))
 
-
-#ggplot(mdf, aes(x =COUNTRY, y = value,  fill=variable))+ geom_bar(stat="identity")
+ggplot(mdf_consumption, aes(x =COUNTRY, y = value,  fill=variable))+ geom_bar(stat="identity")
 
 
 
