@@ -76,6 +76,9 @@ fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RAN
 
 fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("No")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
 
+# Looking for some correlation between Beer consumption and BPA limit, should i perform a t-test?
+fulljoin2 %>% ggplot(aes(x = BEER, y = GENERAL_POPULATION)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point()
 
+fulljoin2 %>% ggplot(aes(x = GENERAL_POPULATION, y = BEER)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point()
 
 tbl_df(drinking_policies)
