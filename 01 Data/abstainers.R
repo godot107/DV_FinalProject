@@ -67,16 +67,14 @@ mdf_abstainers <- melt(abstainers, id.vars = "COUNTRY", measure.vars = c("MALE.x
 tbl_df(mdf_abstainers)
 
 
-ggplot(data = abstainers) + geom_histogram(aes(x = MALE.x), binwidth = 5)
-ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y), binwidth = 5)
-ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x), binwidth = 5)
-ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y), binwidth = 5)
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x, binwidth = 5))
-ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y, binwidth = 5))
+ggplot(data = abstainers) + geom_histogram(aes(x = MALE.x), binwidth = 5) + xlab("Male Abstainers Life Time") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = MALE.y), binwidth = 5) + xlab("Male Abstainers 12 Months") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.x), binwidth = 5) + xlab("Female Abstainers Life Time") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = FEMALE.y), binwidth = 5) + xlab("Female Abstainers 12 Months") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.x, binwidth = 5)) + xlab("Both Genders Abstainers Life Time") + ylab("Count")
+ggplot(data = abstainers) + geom_histogram(aes(x = BOTH_SEXES.y, binwidth = 5)) + xlab("Both Genders Abstainers 12 Months") + ylab("Count")
 
 
-
-ggplot(abstainers, aes(factor(COUNTRY), MALE.x)) + geom_boxplot()
 
 
 

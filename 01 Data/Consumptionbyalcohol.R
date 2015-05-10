@@ -56,5 +56,3 @@ mdf_consumption <- melt(CONSUMPTION_OF_PURE_ALCOHOL, id.vars = "COUNTRY", measur
 
 ggplot(mdf_consumption, aes(x =COUNTRY, y = value,  fill=variable))+ geom_bar(stat="identity")
 
-
-

@@ -58,7 +58,23 @@ drinking_policies <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/r
 
 abstainerslifetime <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from ABSTAINERSLIFETIME"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
+
+CONSUMPTION_OF_PURE_ALCOHOL <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from CONSUMPTION_OF_PURE_ALCOHOL"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
+
+
 fulljoin <- full_join(drinking_policies, abstainerslifetime, by = "COUNTRY") 
+fulljoin2 <- full_join(drinking_policies, CONSUMPTION_OF_PURE_ALCOHOL, by = "COUNTRY") 
+
+
+tbl_df(fulljoin2)
+
+fulljoin %>% select(COUNTRY, BOTHSEXES,PATTERNS_OF_DRINKING_SCORE,SOBRIETY_CHECKPOINTS) %>% filter(PATTERNS_OF_DRINKING_SCORE %in% c("2- somewhat risky","3- medium risky","4- very risky"), SOBRIETY_CHECKPOINTS == "Yes") %>% ggplot(aes(x = COUNTRY, y = BOTHSEXES,fill=PATTERNS_OF_DRINKING_SCORE))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
+
+
+# Does Beer Consumption become affected to random Breath Testing?
+fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("Yes")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
+
+fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("No")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
 
 
 
