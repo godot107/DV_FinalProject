@@ -1,4 +1,4 @@
-Country,Year, Community service, Detention short- or long-term, Fines, Ignition interlocks (alcolocks), License suspended/ revoked, Mandatory treatment, Penalty points, Vehicle impounded
+Country,Year,Community_service,Detention_short_or_long_term,Fines,Ignition_interlocks_alcolocks_,License_suspended_revoked,Mandatory_treatment,Penalty_points,Vehicle_impounded
 Afghanistan,2012,No,Yes,Yes,No,No,No,Yes,No
 Albania,2012,No,No,Yes,No,Yes,No,No,No
 Algeria,2012,No,Yes,Yes,No,Yes,Yes,No,Yes
@@ -27,7 +27,7 @@ Brunei Darussalam,2012,No,Yes,Yes,No,Yes,No,No,No
 Bulgaria,2012,No,Yes,Yes,No,Yes,No,Yes,No
 Burkina Faso,2012,No,No,Yes,No,Yes,No,No,Yes
 Burundi,2012,No,Yes,Yes,No,No,No,No,No
-Côte d'Ivoire,2012,No,Yes,Yes,No,No,No,No,No
+Cte dIvoire,2012,No,Yes,Yes,No,No,No,No,No
 Cabo Verde,2012,No,Yes,Yes,No,Yes,No,No,No
 Cambodia,2012,No,No,No,No,No,Yes,No,No
 Cameroon,2012,No,No,Yes,No,Yes,No,No,No
@@ -45,7 +45,7 @@ Croatia,2012,No,Yes,Yes,No,Yes,No,Yes,No
 Cuba,2012,Yes,Yes,Yes,No,Yes,Yes,Yes,No
 Cyprus,2012,No,No,Yes,No,No,No,Yes,No
 Czech Republic,2012,Yes,Yes,Yes,No,Yes,No,Yes,Yes
-Democratic People's Republic of Korea,2012,NA,NA,NA,NA,NA,NA,NA,NA
+Democratic Peoples Republic of Korea,2012,NA,NA,NA,NA,NA,NA,NA,NA
 Democratic Republic of the Congo,2012,No,Yes,Yes,No,Yes,Yes,No,Yes
 Denmark,2012,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes
 Djibouti,2012,NA,NA,NA,NA,NA,NA,NA,NA
@@ -91,7 +91,7 @@ Kenya,2012,Yes,Yes,Yes,No,Yes,No,No,No
 Kiribati,2012,No,Yes,Yes,No,Yes,No,No,Yes
 Kuwait,2012,NA,NA,NA,NA,NA,NA,NA,NA
 Kyrgyzstan,2012,No,No,Yes,No,Yes,No,No,No
-Lao People's Democratic Republic,2012,No,Yes,Yes,No,No,No,No,No
+Lao Peoples Democratic Republic,2012,No,Yes,Yes,No,No,No,No,No
 Latvia,2012,No,Yes,Yes,No,Yes,No,No,No
 Lebanon,2012,NA,NA,NA,NA,NA,NA,NA,NA
 Lesotho,2012,No,Yes,Yes,No,Yes,No,No,Yes

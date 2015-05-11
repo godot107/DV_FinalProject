@@ -4,11 +4,9 @@ require(dplyr)
 require("ggplot2")
 library(extrafont)
 
-setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Revenue")
-
+#setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Revenue")
+setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc")
 file_path <- "Cost2.csv"
-#file_path <- "Alcoholic beverage tax revenue - Copy.csv"
-#file_path <- "Annual revenues from alcohol excise tax - Copy.csv"
 
 
 

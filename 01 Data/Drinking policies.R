@@ -1,10 +1,16 @@
-setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies")
+require("jsonlite")
+library("RCurl")
+require(dplyr)
+require("ggplot2")
+library(extrafont)
 
+#setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/Final_Project/0 Doc/Drinking policies")
+setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc")
 
 #file_path <- "Legal-BAC-limits - Copy.csv"
 #file_path <- "Penalties for drink driving - Copy.csv"
 #file_path <- "Random breath testing - Copy.csv"
-file_path <- "Sobriety checkpoints - Copy.csv"
+#file_path <- "Sobriety checkpoints - Copy.csv"
 
 df <- read.csv(file_path, stringsAsFactors = FALSE)
 names(df) <- gsub("\\.+", "_", names(df))

@@ -5,7 +5,8 @@ require("ggplot2")
 library(extrafont)
 library("reshape2")
 
-setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drunk Driving-statistics")
+#setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc/Drunk Driving-statistics")
+setwd("C:/Users/willieman/Desktop/Skool/College Homework/_Senior Year/Spring 2015/CS 329e/DataVisualization/DV_FinalProject/0 Doc")
 
 #file_path <- "figure_01_2.csv"
 #file_path <- "figure_02_2.csv"
