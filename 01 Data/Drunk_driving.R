@@ -64,34 +64,32 @@ figure_02_2 <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/na
 figure_03_2 <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from figure_03_2"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_wkm285', PASS='orcl_wkm285',MODE='native_mode',MODEL='model',returnDimensions = 'False',returnFor = 'JSON'),verbose = TRUE)))
 
 # Plots
-ggplot(figure_01_2, aes(x=YEAR, y=TOTAL_FATALITIES)) + geom_line()
-ggplot(figure_01_2, aes(x=YEAR, y=ALCOHOL_RELATED_FATALITIES)) + geom_line()
-ggplot(figure_01_2, aes(x=YEAR, y=NON_ALCOHOL_RELATED)) + geom_line()
-ggplot(figure_01_2, aes(x=YEAR, y=PERCENTAGE)) + geom_line() # Try to fix this scale... quite misleadings
+ggplot(figure_01_2, aes(x=YEAR, y=TOTAL_FATALITIES)) + geom_line() + ggtitle('Total US Fatalities vs Year')
+ggplot(figure_01_2, aes(x=YEAR, y=ALCOHOL_RELATED_FATALITIES)) + geom_line() + ggtitle('Total Alcohol Related Fatalities vs Year')
+ggplot(figure_01_2, aes(x=YEAR, y=NON_ALCOHOL_RELATED)) + geom_line() + ggtitle('US NON_ALCOHOL_RELATED vs Year')
+#ggplot(figure_01_2, aes(x=YEAR, y=PERCENTAGE)) + geom_line() # Try to fix this scale... quite misleadings
 
 #Figure 1
 # Reshaping the data with melt from reshape2
 mdf <- melt(figure_01_2, id.vars = "YEAR", measure.vars = c("TOTAL_FATALITIES", "ALCOHOL_RELATED_FATALITIES","NON_ALCOHOL_RELATED"))
-ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
-ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
+ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line() + ggtitle('Number of Alcohol Related v. Nonalcohol Related Highway Vehicle Fatalities (2001-2010)')
+ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity") + ggtitle('Number of Alcohol Related v. Nonalcohol Related Highway Vehicle Fatalities (2001-2010)')
 
 #Figure 2
 # Reshaping the data with melt from reshape2
-mdf <- melt(figure_02_2, id.vars = "YEAR", measure.vars = c("OCCUPANTS", "PEDESTRIANS","PEDALCYCLISTS", "OTHERS_UNKNOWN" ))
-ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+mdf2 <- melt(figure_02_2, id.vars = "YEAR", measure.vars = c("OCCUPANTS", "PEDESTRIANS","PEDALCYCLISTS", "OTHERS_UNKNOWN" ))
+ggplot(mdf2, aes(x=YEAR, y=value, color=variable)) + geom_line() + ggtitle('Number of Highway vehicle Fatalities Involving Alcohol by Person Type: 2001 - 2010')
 
-ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
-
-ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
+ggplot(mdf2, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity") + ggtitle('Number of Highway vehicle Fatalities Involving Alcohol by Person Type: 2001 - 2010')
 
 
 #Figure 3
 # Reshaping the data with melt from reshape2
-mdf <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("TOTAL_FATALITIES","ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" ))
-ggplot(mdf, aes(x=YEAR, y=value, color=variable)) + geom_line()
+mdf3 <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("TOTAL_FATALITIES","ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" )) 
+ggplot(mdf3, aes(x=YEAR, y=value, color=variable)) + geom_line() + ggtitle('Alcohol Related vs. Nonalcohol Related Recreational Boating Fatalities (2001-2010)')
 
 #Figure 3
-ggplot(figure_03_2, aes(x=YEAR, y=ALCOHOL_USE_FATALITIES))+ geom_bar(stat="identity")
+ggplot(figure_03_2, aes(x=YEAR, y=ALCOHOL_USE_FATALITIES))+ geom_bar(stat="identity") + ggtitle('Alcohol Related Recreational Boating Fatalities (2001-2010)')
 
-mdf <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" ))
-ggplot(mdf, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity")
+mdf4 <- melt(figure_03_2, id.vars = "YEAR", measure.vars = c("ALCOHOL_USE_FATALITIES", "WITHOUT_ALCOHOL_USE" ))
+ggplot(mdf4, aes(x =YEAR, y = value,  fill=variable))+ geom_bar(stat="identity") + ggtitle('Alcohol Related vs. Nonalcohol Related Recreational Boating Fatalities (2001-2010)')

@@ -69,17 +69,20 @@ fulljoin2 <- full_join(drinking_policies, CONSUMPTION_OF_PURE_ALCOHOL, by = "COU
 
 tbl_df(fulljoin2)
 
-fulljoin %>% select(COUNTRY, BOTHSEXES,PATTERNS_OF_DRINKING_SCORE,SOBRIETY_CHECKPOINTS) %>% filter(PATTERNS_OF_DRINKING_SCORE %in% c("2- somewhat risky","3- medium risky","4- very risky"), SOBRIETY_CHECKPOINTS == "Yes") %>% ggplot(aes(x = COUNTRY, y = BOTHSEXES,fill=PATTERNS_OF_DRINKING_SCORE))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
+fulljoin %>% select(COUNTRY, BOTHSEXES,PATTERNS_OF_DRINKING_SCORE,SOBRIETY_CHECKPOINTS) %>% filter(PATTERNS_OF_DRINKING_SCORE %in% c("2- somewhat risky","3- medium risky","4- very risky"), SOBRIETY_CHECKPOINTS == "Yes") %>% ggplot(aes(x = COUNTRY, y = BOTHSEXES,fill=PATTERNS_OF_DRINKING_SCORE))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + ggtitle('Alcohol Abstainers vs Country with Sobriety Checkpoints and Patterns of Drinking ') +ylab("Percentage of Abstainers")
+
+
+fulljoin2 %>% select(COUNTRY, BEER,PATTERNS_OF_DRINKING_SCORE,SOBRIETY_CHECKPOINTS) %>% filter(PATTERNS_OF_DRINKING_SCORE %in% c("2- somewhat risky","3- medium risky","4- very risky"), SOBRIETY_CHECKPOINTS == "Yes") %>% ggplot(aes(x = COUNTRY, y = BEER,fill=PATTERNS_OF_DRINKING_SCORE))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + ggtitle('Beer Consumption vs Country with Sobriety Checkpoints and Patterns of Drinking ') +ylab("Litres of pure Beer per person per year")
 
 
 # Does Beer Consumption become affected to random Breath Testing?
-fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("Yes")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
+fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("Yes")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5))  + ylab("Litres of pure Beer per person per year") + ggtitle('Beer Consumption by Country and Random Breath Testing')
 
-fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("No")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) 
+fulljoin2 %>% select(COUNTRY, BEER,RANDOM_BREATH_TESTING_RBT_USE) %>% filter(RANDOM_BREATH_TESTING_RBT_USE %in% c("No")) %>% ggplot(aes(x = COUNTRY, y = BEER))+ geom_bar(stat="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + ylab("Litres of pure Beer per person per year") + ggtitle('Beer Consumption by Country and No Random Breath Testing')
 
 # Looking for some correlation between Beer consumption and BPA limit, should i perform a t-test?
-fulljoin2 %>% ggplot(aes(x = BEER, y = GENERAL_POPULATION)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point()
+fulljoin2 %>% ggplot(aes(x = BEER, y = GENERAL_POPULATION)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point() + ggtitle('Beer consumption and BPA limit to General Population')
 
-fulljoin2 %>% ggplot(aes(x = GENERAL_POPULATION, y = BEER)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point()
+fulljoin2 %>% ggplot(aes(x = GENERAL_POPULATION, y = BEER)) + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=10, vjust=0.5)) + geom_point() + ggtitle('Beer consumption and BPA limit to General Population')
 
 tbl_df(drinking_policies)

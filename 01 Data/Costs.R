@@ -55,12 +55,12 @@ Costs <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?
 names(Costs)
 
 #Bar Chart of Total Cost by Country
-ggplot(Costs, aes(x = COUNTRY, y = TOTAL_COSTS)) + geom_bar(stat ="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=7, vjust=0.5)) 
+ggplot(Costs, aes(x = COUNTRY, y = TOTAL_COSTS)) + geom_bar(stat ="identity") + theme(plot.title = element_text(size=20, face = "bold" , vjust=2)) + theme(axis.text.x=element_text(angle=70, size=7, vjust=0.5)) + ggtitle('Social costs of alcohol use')
 names(Costs)
 
 
 mdf_Costs <- melt(Costs, id.vars = "COUNTRY", measure.vars = c("DIRECT_LAW_COSTS","DIRECT_HEALTH_COSTS", "DIRECT_OTHER_COSTS", "INDIRECT_COSTS" ))
 
 #Bar Chart MDF
-ggplot(mdf_Costs, aes(x =COUNTRY, y = value,  fill=variable))+ geom_bar(stat="identity") + theme(axis.text.x=element_text(angle=50, size=10, vjust=0.5))
+ggplot(mdf_Costs, aes(x =COUNTRY, y = value,  fill=variable))+ geom_bar(stat="identity") + theme(axis.text.x=element_text(angle=50, size=10, vjust=0.5)) + ggtitle('Social costs of alcohol use in Missions US$')
 
